@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Moving-average crossover — Soft Trading Skill</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a href="../index.html" class="brand">Soft Trading Skill</a></div></header>
+  <main class="container">
+    <article class="card">
+      <h1>Build a simple moving-average crossover in Python</h1>
+      <p>This tutorial shows a minimal example using pandas to compute moving averages and generate signals.</p>
+
+<pre class="code"><code>import pandas as pd
+
+def sma_cross(prices, short=10, long=30):
+    short_sma = prices.rolling(short).mean()
+    long_sma = prices.rolling(long).mean()
+    signal = (short_sma > long_sma).astype(int).diff()
+    return signal</code></pre>
+
+      <p>Use this as a starting point. Backtest with proper out-of-sample testing and include transaction costs.</p>
+    </article>
+  </main>
+  <footer class="site-footer container"><p>© <span id="year"></span> Soft Trading Skill</p></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

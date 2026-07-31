@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soft Trading Skill — Learn Trading, Coding & Strategy</title>
+  <meta name="description" content="Soft Trading Skill — improve trading, learn coding for trading, and build algorithmic strategies." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <img src="assets/logo.svg" alt="Soft Trading Skill logo" class="logo" />
+        <h1 class="brand">Soft Trading Skill</h1>
+      </div>
+      <nav class="nav" id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="#about">About</a>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h2>Improve your trading. Learn to code trading strategies. Trade smarter.</h2>
+          <p>Courses, hands-on tutorials, and code examples to help you grow as a trader and developer. Practical, beginner-friendly, and focused on real results.</p>
+          <p><a class="cta" href="#courses">Start Learning →</a></p>
+        </div>
+        <div class="hero-illustration">
+          <img alt="trading illustration" src="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8e1a3a6a5a3f8c9a8ef5c7c7f6c0f8c9" />
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <div class="container">
+        <h3>Featured Courses</h3>
+        <div class="grid cards">
+          <article class="card">
+            <h4>Foundations of Trading</h4>
+            <p>Understand market structure, risk management, and trading psychology.</p>
+            <a class="btn" href="#about">Learn more</a>
+          </article>
+
+          <article class="card">
+            <h4>Algorithmic Trading with Python</h4>
+            <p>Write, backtest, and deploy strategies using Python and free data sources.</p>
+            <a class="btn" href="#tutorials">Start tutorial</a>
+          </article>
+
+          <article class="card">
+            <h4>Data & Visualization for Traders</h4>
+            <p>Collect data, analyze signals, and visualize trade performance.</p>
+            <a class="btn" href="blog/index.html">Read post</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutorials" class="section alt">
+      <div class="container">
+        <h3>Hands-on Tutorials</h3>
+        <ol class="tutorial-list">
+          <li>Market basics & microstructure: reading orderbooks and liquidity</li>
+          <li>Price action & candlestick patterns — practical setups and limits</li>
+          <li>Algorithmic Trading with Python: data ingest → signals → execution</li>
+          <li>Feature engineering for trading signals using technical & alternative data</li>
+          <li>Backtesting best practices: walk-forward, out-of-sample & transaction costs</li>
+          <li>Risk management: position sizing, stop placement, and drawdown control</li>
+          <li>Momentum & mean-reversion quantitative strategies (with code)</li>
+          <li>Options basics for hedging simple equity strategies</li>
+          <li>Deploying strategies: Docker, lightweight servers, and serverless patterns</li>
+          <li>Trading psychology: decision frameworks and systematic rules</li>
+        </ol>
+        <p>Each tutorial includes full code examples, sample datasets, and exercise prompts so you can build and test as you learn.</p>
+      </div>
+    </section>
+
+    <section id="what-build" class="section">
+      <div class="container">
+        <h3>What you'll build</h3>
+        <ul>
+          <li>A working SMA crossover backtester in Python</li>
+          <li>A simple live price fetcher and signal generator</li>
+          <li>A dashboard with charts to visualize trade performance</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>Sample Code</h3>
+        <pre class="code"><code id="sample-code">def sma_cross(prices, short=10, long=30):
+    short_sma = prices.rolling(short).mean()
+    long_sma = prices.rolling(long).mean()
+    signal = (short_sma > long_sma).astype(int).diff()
+    return signal</code></pre>
+        <button class="btn small" id="copy-code">Copy code</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Soft Trading Skill — Learn trading and code. No financial advice.</p>
+      <p><a href="mailto:hello@example.com">Contact</a> · <a href="blog/index.html">Blog</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
